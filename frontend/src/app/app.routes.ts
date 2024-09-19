@@ -3,6 +3,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { IndexComponent } from './pages/index/index.component';
 import { NavbarComponent } from './pages/navbar/navbar.component';
 import { AppComponent } from './app.component';
+import { FooterComponent } from './pages/footer/footer.component';
 
 export const routes: Routes = [
     {
@@ -16,5 +17,8 @@ export const routes: Routes = [
     },
     {
         path: 'navbar', component: NavbarComponent
+    },
+    {
+        path: 'footer', component: FooterComponent
     }
 ];
