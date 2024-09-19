@@ -2,8 +2,12 @@ import { Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 import { IndexComponent } from './pages/index/index.component';
 import { NavbarComponent } from './pages/navbar/navbar.component';
+import { AppComponent } from './app.component';
 
 export const routes: Routes = [
+    {
+        path: '', component: AppComponent
+    },
     {
         path: 'login', component: LoginComponent
     },
