@@ -2,11 +2,13 @@ body{
     display: flex;
     flex-direction: column;
     padding: 20px;
-}
+  }
 
 .Componentes{
   display: flex;
   flex-direction: row;
+  background-color: rgb(133, 204, 232);
+
 }
 
 .soliactive{
@@ -22,6 +24,7 @@ body{
 
 .soliactive button{
   height: 20px;
+  width: 40px;
 }
 
 .addsoli{
@@ -35,11 +38,20 @@ body{
 .porPagar, .solicitudes, .addsoli{
   margin: 10px;
   padding: 10px;
-  border: 1px solid black;
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
   width: auto;
   align-items: center;
+  background-color: rgb(192, 228, 243);
+}
+
+.porPagar, .solicitudes{
+  border: 1px solid rgb(192, 228, 243);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 
@@ -65,4 +77,25 @@ body{
 
 .solicitudes h3{
   text-align: center;
+  padding-bottom: 10px;
+}
+
+
+.Componentes{
+  display: grid;
+  place-items: center;
+
+}
+
+.addsoli p{
+  padding-bottom: 10px;
+}
+
+.soliactive button{
+  background-color: rgb(235, 221, 221);
+  border-radius: 7px;
+}
+
+.soliactive button:hover{
+  background-color: rgb(72, 72, 72);
 }
