@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 // Importamos el router y el auth service
 import { Router } from '@angular/router';
-import { AuthService } from '../../servicios/auth/auth.service';
+//import { AuthService } from '../../servicios/auth/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -16,17 +16,17 @@ export class LoginComponent {
   password: string='';
   errorMessage: string='';
 
-  constructor(private authService: AuthService, private router: Router) { }
-
+//  constructor(private authService: AuthService, private router: Router) { }
+/** 
   onSubmit(): void{
     this.authService.login(this.email, this.password).subscribe(
       (response) => {
         this.authService.saveToken(response.token);
-        this.router.navigate(['/Homeinversion']);
+        this.router.navigate(['/login']);
       },
       (error) => {
         this.errorMessage = error.error.message;
       }
     );
-  }
+  }*/
 }

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+/** import { Injectable } from '@angular/core';
 // Importamos el cliente HTTP
 import { HttpClient } from '@angular/common/http';
 // Importamos el servicio observable
@@ -32,3 +32,4 @@ export class AuthService {
     localStorage.removeItem('authToken');
   }
 }
+*/

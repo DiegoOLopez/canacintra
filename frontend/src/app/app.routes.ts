@@ -1,6 +1,7 @@
 import {RouterModule,  Routes } from '@angular/router';
-import { NgModule } from '@angular/core';
-
+//import { NgModule,importProvidersFrom } from '@angular/core';
+//import { provideHttpClient, withInterceptors } from '@angular/common/http'; // Asegúrate de tenerlo importado
+//import { bootstrapApplication } from '@angular/platform-browser';
 import { LoginComponent } from './pages/login/login.component';
 import { IndexComponent } from './pages/index/index.component';
 import { NavbarComponent } from './pages/navbar/navbar.component';
@@ -49,9 +50,18 @@ export const routes: Routes = [
     }
 ];
 
+/**
+
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), HttpClientModule],
     exports: [RouterModule]
 })
 export class AppRoutingModule {}
 
+bootstrapApplication(AppComponent, {
+    providers: [
+      importProvidersFrom(RouterModule.forRoot(routes)),
+      provideHttpClient()
+    ]
+  }).catch((err: unknown) => console.error(err));
+   */
