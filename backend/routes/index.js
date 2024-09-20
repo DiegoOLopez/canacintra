@@ -4,14 +4,13 @@
 
 const express = require('express');
 // Definicion de ruta
-const moduloRouter = require('./modulo.router');
 
 function routerApi(app) {
   const router = express.Router();
   app.use('/api/v1', router);
 
   // Agregacion de ruta
-  router.use('/modulo', moduloRouter);
+  //router.use('/modulo', moduloRouter);
 }
 
 module.exports = routerApi;
