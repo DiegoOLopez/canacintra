@@ -125,3 +125,8 @@ body {
 .asset-info .value {
     font-weight: normal;
 }
+
+.buscador-image {
+    width: 40px;
+    height: 40px;
+  }
