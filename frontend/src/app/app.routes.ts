@@ -31,7 +31,7 @@ export const routes: Routes = [
         path: 'HomeInversor', component: HomeInversorComponent
     },
     {
-       path: 'homenegocio', component: HomeNegocioComponent
+       path: 'Homenegocio', component: HomeNegocioComponent
     },
     {
         path: 'register', component: RegisterComponent
