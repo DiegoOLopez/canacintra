@@ -4,11 +4,11 @@ const USUARIO_VARIABLE = 'usuario_table';
 
 // Definimos el esquema de la tabla
 const usuarioSchema = {
-
     id_usuario: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,
+        allowNull: false,
     },
     nombre: {
         type: DataTypes.STRING,
@@ -49,14 +49,20 @@ const usuarioSchema = {
     n_cuenta:{
         type: DataTypes.INTEGER,
         allowNull: true,
-    },
-    
+    }
 }
 
 class UsuarioClase extends Model{
     static associate(models){
-        // Relacion de uno a muchos
-        // this.hasMany(models.Proyecto);
+        // Relación de uno a muchos con Propuesta y Inversion
+        this.hasMany(models.PropuestaClase, {
+            foreignKey: 'id_usuario',
+            as: 'propuestas'
+        });
+        this.hasMany(models.InversionClase, {
+            foreignKey: 'id_usuario',
+            as: 'inversiones'
+        });
     }
 
     static config(sequelize){
@@ -64,8 +70,7 @@ class UsuarioClase extends Model{
             sequelize,
             tableName: USUARIO_VARIABLE,
             modelName: 'UsuarioClase',
-            timestamps: true,
-            underscored: true,
+            timestamps: false
         }
     }
 }
