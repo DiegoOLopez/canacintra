@@ -14,6 +14,7 @@ import { HomeNegocioComponent } from './pages/home-negocio/home-negocio.componen
 import { RegisterComponent } from './pages/register/register.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { FormularioComponent } from './pages/formulario/formulario.component';
+import { RecuperarComponent } from './pages/recuperar/recuperar.component';
 
 // AuthGuard sirve para reservar un sitio si no esta autenticado
 
@@ -48,6 +49,7 @@ export const routes: Routes = [
     {
         path: 'formulario', component: FormularioComponent
     }
+
 ];
 
 /**
