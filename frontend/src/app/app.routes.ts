@@ -1,4 +1,6 @@
-import { Routes } from '@angular/router';
+import {RouterModule,  Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
+
 import { LoginComponent } from './pages/login/login.component';
 import { IndexComponent } from './pages/index/index.component';
 import { NavbarComponent } from './pages/navbar/navbar.component';
@@ -11,6 +13,8 @@ import { HomeNegocioComponent } from './pages/home-negocio/home-negocio.componen
 import { RegisterComponent } from './pages/register/register.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { FormularioComponent } from './pages/formulario/formulario.component';
+
+// AuthGuard sirve para reservar un sitio si no esta autenticado
 
 export const routes: Routes = [
     {
@@ -44,3 +48,10 @@ export const routes: Routes = [
         path: 'formulario', component: FormularioComponent
     }
 ];
+
+@NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
+})
+export class AppRoutingModule {}
+
