@@ -1,0 +1,14 @@
+h1{
+    display: flex;
+    justify-content: center;
+}
+.Parte1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Parte1 img{
+    height: 400px;
+    width: 400px;
+    display: flex;
+}
