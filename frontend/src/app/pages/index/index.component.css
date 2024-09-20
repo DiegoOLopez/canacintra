@@ -56,20 +56,81 @@ p{
 }
 ul{
     display: flex;
-    font-size: 250%;
+    font-size: 55px;
     flex-direction: column;
 }
-/*Parrafo de pide tu prestamo*/
 .Parte3{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: 25px;
-    margin: -20px;
 }
 .h2{
     display: flex;
     margin: 50px;
-    font-size: 35px;
+    font: size 30px;
+}
+section{
+    font-size: 30px ;
+}
+.dueño{
+    font-size: 30px;
+    margin: -10px;
+}
+.Parrafo3{
+    font-size: 25px;
+    margin: 25px;
+}
+.listador{
+    list-style-type: none;
+    font-size: 25px;
+}
+.lista1{
+    margin: 20px;
+}
+.lista2{
+    margin: 20px;
+}
+.lista3{
+    margin: 20px;
+}
+.lista4{
+    margin: 20px;
+}
+span{
+    font-size: 60px;
+    font-weight: 700;
+    margin: 40px;
+}
+.ultimaparte{
+    font-size: 30px;
+    margin: 20px;
+}
+.listadorfinal{
+    list-style-type: none;
+    flex-direction: row;
+    font-size:20px;
+    display: flex;
+    padding: 20px;
+}
+span{
+    font-size: 40px;
+    font-weight: 700;
+    margin: 30px;
+}
+
+.listadorfinal li {
+    display: flex;
+    width: 300px;
+}
+
+.listadorfinal li span{
+    margin-top: -10px;
+    margin-right: 20px;
+    margin-left: 18px;
+}
+.Parrafo4{
+    font-size: 25px;
+    margin: 25px;
 }
