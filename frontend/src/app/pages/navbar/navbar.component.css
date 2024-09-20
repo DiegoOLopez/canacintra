@@ -34,6 +34,14 @@ h1{
     text-decoration: none;
     color: #000;
     font-size: 24px;
+    transition: transform 0.2s, box-shadow 0.2s;
+
+}
+.item:hover{
+    transform: translateY(-10px);   
+}
+.item:active{
+    transform: translateY(-2px);
 }
 
 .navegacion div{
@@ -56,13 +64,12 @@ h1{
     color: #005fd3;
 }
 
-
 .app-navbar {
-    background-color: #87CEEB; /* sky blue color */
+    background-color: #87CEEB; 
   }
 
   .active-inversion {
-    background-color: #87CEEB; /* sky blue color */
+    background-color: #87CEEB; 
   }
 
   .InicioSesion{
@@ -77,7 +84,8 @@ h1{
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
             outline: none;
             white-space: nowrap;
-            margin: -20;
+            margin: 20px;
+            display: flex;
   }
   .InicioSesion:Hover{
     transform: translateY(-5px);
