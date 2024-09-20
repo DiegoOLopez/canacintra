@@ -1,18 +1,26 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .footer{
     background-color: #002e67;
     color: #fff;   
     display: flex;
     justify-content: space-evenly;
+    padding-top: 12px;
+}
+
+h3{
+    font-size: 24px;
+} 
+
+.contenedor_redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 8px 0;
+}
+.redes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.redes p{
+    font-size: 12px;
 }
