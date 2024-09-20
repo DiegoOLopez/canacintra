@@ -1,6 +1,7 @@
 h1{
     display: flex;
     justify-content: center;
+    margin: 60px;
 }
 .Parte1{
     display: flex;
@@ -11,4 +12,37 @@ h1{
     height: 400px;
     width: 400px;
     display: flex;
+}
+.Parte2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.Parte2 img{
+    height: 400px;
+    width: 400px;
+    display: flex;
+    
+}
+.Div3{
+    display: flex;
+    padding: 10%;
+
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    font-size: 250%;
+    flex-direction: column;
+}
+.Parte3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.h2{
+    display: flex;
+    margin: 50px;
 }
