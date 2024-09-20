@@ -1,1 +1,45 @@
-<p>formulario works!</p>
+<form>
+  <div>
+    <label for="sector">Sector:</label>
+    <input type="text" id="sector" name="sector" required>
+  </div>
+
+  <div>
+    <label for="tiempo-operacion">Tiempo de Operación:</label>
+    <input type="text" id="tiempo-operacion" name="tiempo-operacion" required>
+  </div>
+
+  <div>
+    <label for="red-social">Red Social:</label>
+    <input type="text" id="red-social" name="red-social">
+  </div>
+
+  <div>
+    <label for="descripcion">Descripción:</label>
+    <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+  </div>
+
+  <div>
+    <label for="problema">Problema a Resolver:</label>
+    <textarea id="problema" name="problema" rows="4" required></textarea>
+  </div>
+
+  <div>
+    <label for="monto">Monto Solicitado (en pesos):</label>
+    <input type="number" id="monto" name="monto" required>
+  </div>
+
+  <div>
+    <label for="plazo">Plazo Seleccionado:</label>
+    <select id="plazo" name="plazo" required>
+      <option value="3 meses">3 meses</option>
+      <option value="6 meses">6 meses</option>
+      <option value="12 meses">12 meses</option>
+      <option value="24 meses">24 meses</option>
+    </select>
+  </div>
+
+  <div>
+    <button type="submit">Enviar</button>
+  </div>
+</form>
