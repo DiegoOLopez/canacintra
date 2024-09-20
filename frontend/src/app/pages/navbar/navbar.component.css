@@ -64,3 +64,26 @@ h1{
   .active-inversion {
     background-color: #87CEEB; /* sky blue color */
   }
+
+  .InicioSesion{
+    background: linear-gradient(135deg, #2109fe, #140155);
+            border: none;
+            border-radius: 17px;
+            color: white;
+            padding: 10px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            outline: none;
+            white-space: nowrap;
+            margin: -20;
+  }
+  .InicioSesion:Hover{
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  }
+  .InicioSesion:active{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
