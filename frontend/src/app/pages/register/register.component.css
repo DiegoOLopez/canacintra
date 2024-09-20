@@ -35,7 +35,7 @@ align-items: center;
 flex-direction: column;
 box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
 width: 528px;
-height: 625px;
+height: 700px;
 justify-content: center;
 
 }
@@ -63,6 +63,7 @@ display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 18px;
 
 }
 
@@ -80,6 +81,7 @@ display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 18px;
 }
 
 .CajaNombreP{
@@ -96,6 +98,7 @@ display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 18px;
 
 }
 
@@ -113,6 +116,7 @@ display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 18px;
 }
 
 .formaC{
@@ -139,6 +143,7 @@ padding-left: 5px;
 display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 18px;
 }
 .contraR{
 border-radius: 5px;
@@ -166,18 +171,41 @@ width: 200px;
     color: #fff;
 font-size: 10px;
 display: flex ;
+margin: 15px;
 
 }
 .CrearC{
 display: flex;
 justify-content: center;
-
+margin: 18px;
 
 }
 
 
 .crear{
-border-radius: 5px;
+background: linear-gradient(135deg, #c14fc9c8, #140155);
+border: none;
+color: white;
+font-size: 14px;
+cursor: pointer;
+transition: transform 0.2s, box-shadow 0.2s;
+box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+outline: none;
+white-space: nowrap;
+padding: 10px 25px;
+margin: 20px;
+border-radius: 16px;
 display: flex;
-    justify-content: center;
+justify-content: center;
+}
+
+.crear:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+.crear:active{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
