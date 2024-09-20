@@ -5,9 +5,7 @@ body {
     font-family: sans-serif;
 }
 
-.app-navbar {
-    background-color: #87CEEB; /* sky blue color */
-  }
+
 .container {
     width: 90%;
     max-width: 1200px;

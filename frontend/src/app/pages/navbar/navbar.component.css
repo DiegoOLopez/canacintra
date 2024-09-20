@@ -55,3 +55,12 @@ h1{
     transition: all 0.5s ease;
     color: #005fd3;
 }
+
+
+.app-navbar {
+    background-color: #87CEEB; /* sky blue color */
+  }
+
+  .active-inversion {
+    background-color: #87CEEB; /* sky blue color */
+  }
