@@ -43,9 +43,9 @@ body {
 }
 
 .login-button {
-    background-color: #007bff;
+    background-color: #174f8a;
     color: #fff;
-    padding: 10px 15px;
+    padding: 10px 30px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -58,8 +58,8 @@ body {
 }
 
 .user-info img {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     margin-right: 15px;
 }
@@ -129,4 +129,9 @@ body {
 .buscador-image {
     width: 40px;
     height: 40px;
+  }
+
+.notificaciones-image {
+    width: 50px;
+    height: 50px;
   }
