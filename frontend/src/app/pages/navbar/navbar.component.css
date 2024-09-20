@@ -77,7 +77,8 @@ h1{
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
             outline: none;
             white-space: nowrap;
-            margin: -20;
+            margin: 20px;
+            display: flex;
   }
   .InicioSesion:Hover{
     transform: translateY(-5px);
@@ -86,4 +87,7 @@ h1{
   .InicioSesion:active{
     transform: translateY(-2px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  .navegacion{
+    
   }
