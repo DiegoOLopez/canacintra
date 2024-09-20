@@ -5,6 +5,7 @@ import { NavbarComponent } from './pages/navbar/navbar.component';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { HomeInversorComponent } from './pages/home-inversor/home-inversor.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 export const routes: Routes = [
     {
@@ -24,5 +25,8 @@ export const routes: Routes = [
     },
     {
         path: 'HomeInversor', component: HomeInversorComponent
+    },
+    {
+        path: 'register', component: RegisterComponent
     }
 ];
