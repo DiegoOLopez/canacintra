@@ -9,3 +9,60 @@ const { creacionOportunidadSchema, actualizacionOportunidadSchema, busquedaOport
 const router = express.Router();
 
 const service = new OportunidadService();
+
+// Lista todos los usuarios
+router.get('/', async (req, res, next) => {
+    try {
+        const oportunidades = await service.find();
+        res.json(oportunidades);
+    } catch (error) {
+        next(error);
+    }
+});
+
+// Obtener una oportunidad
+router.get('/:id_oportunidad', validatorHandler(busquedaOportunidadSchema, 'params'), async (req, res, next) => {
+    const { id_oportunidad } = req.params;
+    try {
+        const oportunidad = await service.findById(id_oportunidad);
+        res.json(oportunidad);
+    } catch (error) {
+        next(error);
+    }
+});
+
+// Crear una oportunidad
+router.get('/', validatorHandler(creacionOportunidadSchema), async (req, res, next) => {
+    const body = req.body;
+    try {
+        const oportunidad = await service.create(body);
+        res.status(201).json(oportunidad);
+    } catch (error) {
+        next(error);
+    }
+});
+
+// Actualizar una oportunidad
+router.patch('/:id_oportunidad', validatorHandler(busquedaOportunidadSchema, 'params'), validatorHandler(actualizacionOportunidadSchema), async (req, res, next) => {    
+    const { id_oportunidad } = req.params;
+    const body = req.body;
+    try {
+        const oportunidad = await service.updateById(id_oportunidad, body);
+        res.json(oportunidad);
+    } catch (error) {
+        next(error);
+    }
+});
+
+// Eliminar una oportunidad
+router.delete('/:id_oportunidad', validatorHandler(busquedaOportunidadSchema, 'params'), async (req, res, next) => {
+    const { id_oportunidad } = req.params;
+    try {
+        const oportunidad = await service.deleteById(id_oportunidad);
+        res.json(oportunidad);
+    } catch (error) {
+        next(error);
+    }
+});
+
+module.exports = router;

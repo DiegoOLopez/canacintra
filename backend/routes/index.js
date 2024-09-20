@@ -3,6 +3,11 @@
  */
 const express = require('express');
 // Definicion de ruta
+const inversionRouter = require('./inversion.router');
+const oportunidadRouter = require('./oportunidad.router');
+const pagoEmprendedorRouter = require('./pago_emprendedor.router');
+const pagoInversionistaRouter = require('./pago_inversionista.router');
+const propuestaRouter = require('./propuesta.router');
 const usuarioRouter = require('./usuario.router');
 
 function routerApi(app) {
@@ -10,7 +15,13 @@ function routerApi(app) {
   app.use('/api', router);
 
   // Agregacion de ruta
+  router.use('/inversion', inversionRouter);
+  router.use('/oportunidad', oportunidadRouter);
+  router.use('/pago-emprendedor', pagoEmprendedorRouter);
+  router.use('/pago-inversionista', pagoInversionistaRouter);
+  router.use('/propuesta', propuestaRouter);
   router.use('/usuario', usuarioRouter);
+
 }
 
 module.exports = routerApi;
