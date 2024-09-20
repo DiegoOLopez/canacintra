@@ -9,7 +9,8 @@ import { HomeInversorComponent } from './pages/home-inversor/home-inversor.compo
 import { HomeNegocioComponent } from './pages/home-negocio/home-negocio.component';
 
 import { RegisterComponent } from './pages/register/register.component';
-
+import { ContactoComponent } from './pages/contacto/contacto.component';
+import { FormularioComponent } from './pages/formulario/formulario.component';
 
 export const routes: Routes = [
     {
@@ -35,5 +36,11 @@ export const routes: Routes = [
     },
     {
         path: 'register', component: RegisterComponent
+    },
+    {
+        path: 'contacto', component: ContactoComponent
+    },
+    {
+        path: 'formulario', component: FormularioComponent
     }
 ];
