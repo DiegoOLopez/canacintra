@@ -1,0 +1,68 @@
+body{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.Componentes{
+  display: flex;
+  flex-direction: row;
+}
+
+.soliactive{
+  display: flex;
+  flex-direction: row;
+}
+
+.soliactive p{
+  margin-right: 10px;
+  margin-bottom: 15px;
+
+}
+
+.soliactive button{
+  height: 20px;
+}
+
+.addsoli{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+
+.porPagar, .solicitudes, .addsoli{
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: auto;
+  align-items: center;
+}
+
+
+
+.itemPendientes{
+  display: flex;
+  flex-direction: row;
+  margin-right: 10px;
+}
+
+.itemPendientes p{
+  margin-right: 20px;
+}
+
+.itemPendientes{
+  align-items: center;
+  text-align: center;
+}
+
+.pendientes h4{
+  text-align: center;
+}
+
+.solicitudes h3{
+  text-align: center;
+}
