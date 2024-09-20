@@ -1,7 +1,7 @@
 body {
     font-family: sans-serif;
     margin: 0;
-    background-color: #032B44; /* Azul marino */
+    background-color: #063756; /* Azul marino */
     font-family: sans-serif;
 }
 
@@ -10,7 +10,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #c2d3ea;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
