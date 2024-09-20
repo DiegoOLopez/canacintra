@@ -1,3 +1,4 @@
+<nav>
 <section class="navbar">
     <div class="logo">
         <img src="./assets/images/logo.jpeg" alt="Logo">
@@ -5,16 +6,18 @@
     </div>
     <div class="navegacion">
         <div>
-            <a routerLink="/home">Home</a>
+            <a routerLink="/index" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
         </div>
         <div>
-            <a routerLink="/prestamo">Prestamo</a>
+            <a routerLink="/HomeInversor" routerLinkActive="active" ariaCurrentWhenActive="page">Inversor</a>
         </div>
         <div>
-            <a routerLink="/inversion">Inversion</a>
+            <a routerLink="/Homenegocio" routerLinkActive="active" ariaCurrentWhenActive="page">Negocio</a>
         </div>
         <div>
-            <a routerLink="/contacto">Contacto</a>
+            <a routerLink="/contacto" routerLinkActive="active" ariaCurrentWhenActive="page">Contacto</a>
         </div>
     </div>
 </section>
+</nav>
+<router-outlet></router-outlet>
