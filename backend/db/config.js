@@ -8,8 +8,11 @@ const URI = `postgres://${USER}:${PASSWORD}@${config.db_host}:${config.db_port}/
 //const URI = `mysql://${USER}:${PASSWORD}@${config.db_host}:${config.db_port}/${config.db_name}`;
 
 module.exports = {
+  
   development: {
     url: URI,
+    logging: console.log, // Esto habilita el logging
+
     dialect: 'postgres',
   },
   production: {
