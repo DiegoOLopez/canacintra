@@ -8,18 +8,18 @@
 <p> Por favor, inicia sesión para continuar.</p>
 </div>
 
-<div class="login">
+<form class="login" (submit)="onSubmit()">
 <h1 class="sesion">Inicio de sesión</h1>
     
     <div class="cajaM">
     <p>Correo electronico</p>
-    <input class="Cajaform" type="email" placeholder="Ingresa tu correo electronico" required>
+    <input id="email" name="email" [(ngModel)]="email" class="Cajaform" type="email" placeholder="Ingresa tu correo electronico" required>
 
     </div>
 
     <div class="cajaPas">
         <p>Contraseña</p>
-        <input class="Cajaform2" type="password" placeholder="Ingresa tu contraseña" required>
+        <input id="contrasenia" name="contrasenia" [(ngModel)]="contrasenia" class="Cajaform2" type="password" placeholder="Ingresa tu contraseña" required>
     </div>
 
     <div class="caja">
@@ -29,9 +29,12 @@
     <a class="olvidaste" href="">¿Olvidaste tu contraseña?</a>
 
     </div>
-    <input class="iniciarS" type="button" value="Inicar sesión">
+    <input class="iniciarS" type="submit" value="Inicar sesión">
+
+    <p *ngIf="errorMessage" class="error-message"></p>
+
     <p class="newC">¿Aún no tienes cuenta? <a class="newCount" href="">Crea una cuenta</a></p>
-</div>
+</form>
 
 </section>
 
