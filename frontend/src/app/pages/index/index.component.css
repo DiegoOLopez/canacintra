@@ -132,5 +132,7 @@ span{
 }
 .Parrafo4{
     font-size: 25px;
-    margin: 25px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
 }
