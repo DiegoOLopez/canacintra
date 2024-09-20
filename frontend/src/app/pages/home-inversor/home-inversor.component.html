@@ -1,13 +1,13 @@
-<div class="container"></div>
+<div class="container">
     <div class="header">
         <div class="search-bar">
-            <input type="text" id="search-input" placeholder="Buscar">
+            <input type="text" placeholder="Buscar">
             <img src="/assets/images/buscar.png" alt="buscador" class="buscador-image">
         </div>
         <div class="user-actions">
             <img src="/assets/images/notificaciones.png" alt="chat Icon" class="notificaciones-image">
             <button class="login-button">Login</button>
-        </div>
+          </div>
     </div>
     <div class="content">
         <div class="user-info">
@@ -31,56 +31,75 @@
         </div>
         <div class="assets-details">
             <h2>DETALLES ACTIVOS</h2>
-            <div id="assets-list">
-                <!-- assets will be rendered here -->
+            <div class="asset">
+                <h3>Emprendimiento 1</h3>
+                <div class="asset-info">
+                    <div class="label">Description</div>
+                    <div class="value">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, assumenda.</div>
+                </div>
+                <div class="asset-info">
+                    <div class="label">Valor Actual</div>
+                    <div class="value">$690.00</div>
+                </div>
+                <div class="asset-info">
+                    <div class="label">Fecha de adquisición</div>
+                    <div class="value">2023-10-27</div>
+                </div>
+                <div class="asset-info">
+                    <div class="label">30%</div>
+                    <div class="label">Plazo: días</div>
+                </div>
+                <div class="asset-info">
+                    <div class="label">Fecha de vencimiento</div>
+                    <div class="value">2024-04-26</div>
+                </div>
             </div>
+            <!--<div class="asset">
+                <h3>Emprendimiento 2</h3>
+                <div class="asset-info">
+                    <div class="label">Description</div>
+                    <div class="value">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, assumenda.</div>
+                </div>
+                <div class="asset-info">
+                    <div class="label">Valor Actual</div>
+                    <div class="value">$575.00</div>
+                </div>
+                <div class="asset-info">
+                    <div class="label">Fecha de adquisición</div>
+                    <div class="value">2023-11-15</div>
+                </div>
+                <div class="asset-info">
+                    <div class="label">25%</div>
+                    <div class="label">Plazo: días</div>
+                </div>
+                <div class="asset-info">
+                    <div class="label">Fecha de vencimiento</div>
+                    <div class="value">2024-05-14</div>
+                </div>
+            </div>
+            <div class="asset">
+                <h3>Emprendimiento 3</h3>
+                <div class="asset-info">
+                    <div class="label">Description</div>
+                    <div class="value">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, assumenda.</div>
+                </div>
+                <div class="asset-info">
+                    <div class="label">Valor Actual</div>
+                    <div class="value">$1,035.00</div>
+                </div>
+                <div class="asset-info">
+                    <div class="label">Fecha de adquisición</div>
+                    <div class="value">2023-12-01</div>
+                </div>
+                <div class="asset-info">
+                    <div class="label">45%</div>
+                    <div class="label">Plazo: días</div>
+                </div>
+                <div class="asset-info">
+                    <div class="label">Fecha de vencimiento</div>
+                    <div class="value">2024-06-30</div>
+                </div>
+            </div>-->
         </div>
     </div>
 </div>
-
-<script>
-    const searchInput = document.getElementById('search-input');
-    const assetsList = document.getElementById('assets-list');
-
-    searchInput.addEventListener('input', (e) => {
-        const searchTerm = e.target.value.toLowerCase();
-        const assets = getAssetsFromJavaComponent(); // call Java component to get assets
-        const filteredAssets = assets.filter((asset) => {
-            return asset.name.toLowerCase().includes(searchTerm);
-        });
-        renderAssets(filteredAssets);
-    });
-
-    function renderAssets(assets) {
-        assetsList.innerHTML = '';
-        assets.forEach((asset) => {
-            const assetHTML = `
-                <div class="asset">
-                    <h3>${asset.name}</h3>
-                    <div class="asset-info">
-                        <div class="label">Description</div>
-                        <div class="value">${asset.description}</div>
-                    </div>
-                    <div class="asset-info">
-                        <div class="label">Valor Actual</div>
-                        <div class="value">$${asset.value}</div>
-                    </div>
-                    <!-- add more asset info here -->
-                </div>
-            `;
-            assetsList.innerHTML += assetHTML;
-        });
-    }
-
-    function getAssetsFromJavaComponent() {
-        // call Java component to get assets, e.g., using Ajax or a Java-based API
-        // for demonstration purposes, we'll use a sample data array
-        const assets = [
-            { name: 'Emprendimiento 1', description: 'Lorem ipsum...', value: 690.00 },
-            { name: 'Emprendimiento 2', description: 'Lorem ipsum...', value: 575.00 },
-            { name: 'Emprendimiento 3', description: 'Lorem ipsum...', value: 1035.00 },
-            // add more assets here
-        ];
-        return assets;
-    }
-</script>
