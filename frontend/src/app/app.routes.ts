@@ -48,6 +48,9 @@ export const routes: Routes = [
     },
     {
         path: 'formulario', component: FormularioComponent
+    },
+    {
+        path: 'homeadmin', component: HomeAdminComponent
     }
 ];
 
