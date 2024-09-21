@@ -1,39 +1,40 @@
 <app-navbarsesion></app-navbarsesion>
 <div class="general">
-<form>
+<form (submit)="enviarPropuesta()">
+
+  <div class="csector">
+    <label for="ubicacion">Ubicacion:</label>
+    <input class="entradas" type="text" id="ubicacion" name="ubicacion" [(ngModel)]="ubicacion" required>
+  </div>
+
   <div class="csector">
     <label for="sector">Sector:</label>
-    <input class="entradas" type="text" id="sector" name="sector" required>
+    <input class="entradas" type="text" id="sector" name="sector" [(ngModel)]="sector" required>
   </div>
 
   <div class="ctiempo">
     <label for="tiempo-operacion">Tiempo de Operación:</label>
-    <input class="entradas" type="text" id="tiempo-operacion" name="tiempo-operacion" required>
-  </div>
-
-  <div class="cSocial">
-    <label for="red-social">Red Social:</label>
-    <input class="entradas" type="text" id="red-social" name="red-social">
+    <input class="entradas" type="text" id="tiempo-operacion" [(ngModel)]="tiempo_operacion" name="tiempo-operacion" required>
   </div>
 
   <div class="cDescrip">
     <label for="descripcion">Descripción:</label>
-    <textarea class="E1" id="descripcion" name="descripcion" rows="4" required></textarea>
+    <textarea class="E1" id="descripcion" name="descripcion" rows="4" [(ngModel)]="descripcion" required></textarea>
   </div>
 
   <div class="cProblem">
     <label for="problema">Problema a Resolver:</label>
-    <textarea class="E1" id="problema" name="problema" rows="4" required></textarea>
+    <textarea class="E1" id="problema" name="problema" rows="4" [(ngModel)]="problema" required></textarea>
   </div>
 
   <div class="cMonto">
     <label for="monto">Monto Solicitado (en pesos):</label>
-    <input class="entradas" type="number" id="monto" name="monto" required>
+    <input class="entradas" type="number" id="monto" [(ngModel)]="monto" name="monto" required>
   </div>
 
   <div class="cPlazo">
-    <label class="plazos" for="plazo">Plazo Seleccionado:</label>
-    <select  id="plazo" name="plazo" required>
+    <label class="plazos" for="plazo" >Plazo Seleccionado:</label>
+    <select  id="plazo" name="plazo" [(ngModel)]="plazo" required>
       <option value="3 meses">3 meses</option>
       <option value="6 meses">6 meses</option>
       <option value="12 meses">12 meses</option>
@@ -41,10 +42,31 @@
     </select>
   </div>
 
+  <div class="cDescrip">
+    <label for="capacidad_pago">Porcentaje para financiera:</label>
+    <textarea class="E1" id="capacidad_pago" name="capacidad_pago" rows="4" [(ngModel)]="porcentaje_financiera" required></textarea>
+  </div>
+
+  <div class="cDescrip">
+    <label for="capacidad_pago">Capacidad de pago:</label>
+    <textarea class="E1" id="capacidad_pago" name="capacidad_pago" rows="4" [(ngModel)]="capacidad_pago" required></textarea>
+  </div>
+
+  <div class="cProblem">
+    <label for="problema">Clientes:</label>
+    <textarea class="E1" id="problema" name="problema" rows="4" [(ngModel)]="clientes" required></textarea>
+  </div>
+
+  
+
   <div class="button">
-    <button class="botonEnviar" type="submit">Enviar</button>
+    <input class="botonEnviar" type="submit" value="Enviar">
   </div>
 </form>
+<div *ngIf="respuesta_a_cliente">
+  <h3>Respuesta del Servidor:</h3>
+  <p>{{ respuesta_a_cliente }}</p>
+</div>
 
 </div>
 <app-footer></app-footer>

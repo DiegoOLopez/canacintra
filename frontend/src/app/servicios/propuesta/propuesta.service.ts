@@ -11,7 +11,7 @@ export class PropuestaService {
   constructor(private http: HttpClient) {}
 
   // Método para obtener propuestas desde la API
-  login(credentials: any): Observable<any> {
-    return this.http.get<any>(this.apiUrl,credentials); // Cambié a get() para obtener datos
+  postPropuesta(form: any): Observable<any> {
+    return this.http.post<any>(this.apiUrl,form); // Cambié a get() para obtener datos
   }
 }
