@@ -1,37 +1,39 @@
+<app-navbar></app-navbar>
+<body>
 <form>
-  <div>
+  <div class="csector">
     <label for="sector">Sector:</label>
-    <input type="text" id="sector" name="sector" required>
+    <input class="entradas" type="text" id="sector" name="sector" required>
   </div>
 
-  <div>
+  <div class="ctiempo">
     <label for="tiempo-operacion">Tiempo de Operación:</label>
-    <input type="text" id="tiempo-operacion" name="tiempo-operacion" required>
+    <input class="entradas" type="text" id="tiempo-operacion" name="tiempo-operacion" required>
   </div>
 
-  <div>
+  <div class="cSocial">
     <label for="red-social">Red Social:</label>
-    <input type="text" id="red-social" name="red-social">
+    <input class="entradas" type="text" id="red-social" name="red-social">
   </div>
 
-  <div>
+  <div class="cDescrip">
     <label for="descripcion">Descripción:</label>
-    <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+    <textarea class="E1" id="descripcion" name="descripcion" rows="4" required></textarea>
   </div>
 
-  <div>
+  <div class="cProblem">
     <label for="problema">Problema a Resolver:</label>
-    <textarea id="problema" name="problema" rows="4" required></textarea>
+    <textarea class="E1" id="problema" name="problema" rows="4" required></textarea>
   </div>
 
-  <div>
+  <div class="cMonto">
     <label for="monto">Monto Solicitado (en pesos):</label>
-    <input type="number" id="monto" name="monto" required>
+    <input class="entradas" type="number" id="monto" name="monto" required>
   </div>
 
-  <div>
-    <label for="plazo">Plazo Seleccionado:</label>
-    <select id="plazo" name="plazo" required>
+  <div class="cPlazo">
+    <label class="plazos" for="plazo">Plazo Seleccionado:</label>
+    <select  id="plazo" name="plazo" required>
       <option value="3 meses">3 meses</option>
       <option value="6 meses">6 meses</option>
       <option value="12 meses">12 meses</option>
@@ -39,7 +41,10 @@
     </select>
   </div>
 
-  <div>
-    <button type="submit">Enviar</button>
+  <div class="button">
+    <button class="botonEnviar" type="submit">Enviar</button>
   </div>
 </form>
+
+</body>
+<app-footer></app-footer>
