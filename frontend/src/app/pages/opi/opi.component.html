@@ -1,12 +1,6 @@
 <app-navbarsesion></app-navbarsesion>
 <div *ngIf="oportunidades.length > 0">
     <h2>Lista de Oportunidades</h2>
-    <ul>
-      <li *ngFor="let oportunidad of oportunidades">
-        <strong>Descripción:</strong> {{ oportunidad.descripcion }} <br>
-        <strong>Monto Solicitado:</strong> {{ oportunidad.monto }} pesos
-      </li>
-    </ul>
   </div>
 <div class="container">
     <div class="card" *ngFor="let oportunidad of oportunidades">
@@ -19,17 +13,12 @@
         <p>No se ha alcanzado el mínimo</p>
         <div class="details">
             <div class="item">
-                <p><strong>$500.00 MXN</strong> objetivo</p>
-                <p>Tasa anual fija: <strong>10%</strong></p>
-                <p>Mínimo de inversión: <strong>$100.00 MXN</strong></p>
-                <p>Plazo: <strong>Entre 3 y 6 meses</strong></p>
-                <p>Quedan 30 días para invertir</p>
-            </div>
-            <div class="item">
-                <p>Min. $300.00 MXN</p>
-                <p>Max. $500.00 MXN</p>
-                <p>Evaluación de riesgo: <strong>Alto</strong></p>
-            </div>
+                <p><strong>Monto:</strong> ${{ oportunidad.monto }} MXN</p>
+                <p><strong>Tasa anual fija:</strong> 10%</p>
+                <p><strong>Mínimo de inversión:</strong> $100.00 MXN</p>
+                <p><strong>Pago Mensual: </strong>${{ oportunidad.pago_mensual }} MXN</p>
+                <p><strong>Evaluación de riesgo:</strong> Alto</p>
+            </div>            
         </div>
         <div class="buttons">
             <button>Conoce más</button>
