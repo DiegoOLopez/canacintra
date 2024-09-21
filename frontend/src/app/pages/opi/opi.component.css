@@ -1,0 +1,80 @@
+body {
+    font-family: sans-serif;
+    background-color: #f2f2f2;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.card h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.card .progress-bar {
+    background-color: #e0e0e0;
+    height: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.card .progress-bar .fill {
+    background-color: #007bff;
+    height: 100%;
+}
+
+.card .details {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.card .details .item {
+    text-align: left;
+}
+
+.card .details .item p {
+    margin-bottom: 5px;
+}
+
+.card .details .item strong {
+    font-weight: bold;
+}
+
+.card .buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.card .buttons button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.card .buttons button:hover {
+    background-color: #0062cc;
+}
