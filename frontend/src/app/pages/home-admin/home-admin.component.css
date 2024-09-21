@@ -1,10 +1,12 @@
 body{
-    background-color: #083e7ee4;
+    background-color: #022e63e4;
 }
 h1{
+    color: white;
     font-size: 50px;
     display: flex;
     justify-content: center;
+    margin-bottom: 60px;
 }
 h2{
     display: flex;
@@ -42,6 +44,7 @@ p{
     height: 250px;
     margin: 0px auto;
     padding-top: 10px;
+    margin-bottom: 60px;
 }
 .recuadro{
     justify-content: center;
