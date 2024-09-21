@@ -16,6 +16,9 @@ router.post('/',
                 tipo: user.tipo,       // Incluye el tipo de usuario (rol)
                 nombre: user.nombre,
                 correo: user.correo,
+                apellido_p: user.apellido_p,
+                apellido_m: user.apellido_m,
+                n_cuenta: user.n_cuenta
             }
             const token = jwt.sign(payload, config.jwtSecret);
             res.json({
