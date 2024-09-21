@@ -9,6 +9,7 @@ const pagoEmprendedorRouter = require('./pago_emprendedor.router');
 const pagoInversionistaRouter = require('./pago_inversionista.router');
 const propuestaRouter = require('./propuesta.router');
 const usuarioRouter = require('./usuario.router');
+const validacion = require('./validacion.router');
 
 const authRouter = require('./auth.router');
 
@@ -24,6 +25,9 @@ function routerApi(app) {
   router.use('/propuesta', propuestaRouter);
   router.use('/usuario', usuarioRouter);
   router.use('/log', authRouter);
+  router.use('/validacion', validacion);
+  router.use( '/riesgo', validacion);
+
 }
 
 module.exports = routerApi;

@@ -34,10 +34,7 @@ router.get('/:id_propuesta', validatorHandler(buscaPropuesta, 'params'), async (
 });
 
 // Crear una propuesta
-router.post('/',
-    passport.authenticate('jwt', { session: false }), 
-    checkAdminRole,
-    validatorHandler(creacionPropuesta), async (req, res, next) => {
+router.post('/', async (req, res, next) => {
     const body = req.body;
     try {
         const propuesta = await service.create(body);
@@ -48,7 +45,7 @@ router.post('/',
 });
 
 // Actualizar una propuesta
-router.post('/:id_propuesta', validatorHandler(buscaPropuesta, 'params'), validatorHandler(actualizacionPropuesta), async (req, res, next) => {
+router.patch('/:id_propuesta', validatorHandler(buscaPropuesta, 'params'), validatorHandler(actualizacionPropuesta), async (req, res, next) => {
     const { id_propuesta } = req.params;
     const body = req.body;
     try {
