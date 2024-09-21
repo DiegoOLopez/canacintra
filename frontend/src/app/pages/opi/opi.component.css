@@ -66,12 +66,12 @@ body {
 }
 
 .card .buttons button {
-    background-color: #007bff;
+    background-color: #355c85;
     color: #fff;
     border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
+    border-radius: 4px;
+    padding: 9px 17px;
+    font-size: 12px;
     cursor: pointer;
 }
 
