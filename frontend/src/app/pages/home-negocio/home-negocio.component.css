@@ -7,7 +7,7 @@ body{
 .Componentes{
   display: flex;
   flex-direction: row;
-  background-color: rgb(133, 204, 232);
+  background-color: rgb(232 232 232);
 
 }
 
@@ -31,29 +31,57 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-
-
+  transition: all 0.3s ease;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
 }
 
+
+
+.addsoli:hover{
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  animation: bounce 0.5s ease-in-out;
+}
+
+
 .porPagar, .solicitudes, .addsoli{
+  border: 1px solid rgb(255, 252, 252);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
   margin: 10px;
   padding: 10px;
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
   width: auto;
   align-items: center;
-  background-color: rgb(192, 228, 243);
+  background-color:#fff;
+  border-radius: 10px;
 }
 
 .porPagar, .solicitudes{
-  border: 1px solid rgb(192, 228, 243);
+  border: 1px solid rgb(255, 255, 255);
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
   margin: 10px;
   padding: 10px;
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  border-radius: 10px;
 }
 
+.porPagar{
+  transition: all 0.3s ease;
+}
+
+.porPagar:hover{
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+
+}
 
 
 .itemPendientes{
@@ -80,19 +108,41 @@ body{
   padding-bottom: 10px;
 }
 
-
-.Componentes{
-  display: grid;
-  place-items: center;
+.solicitudes{
+  transition: all 0.3s ease;
 
 }
+
+.solicitudes:hover{
+  box-shadow: 0px 6px 12px rgb(255, 255, 255);
+  transform: translateY(-5px)
+
+}
+
+.Componentes{
+  place-items: center;
+  display: flex;
+  flex-direction: column-reverse;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagoysoli{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-bottom: 71px;
+
+}
+
 
 .addsoli p{
   padding-bottom: 10px;
 }
 
 .soliactive button{
-  background-color: rgb(235, 221, 221);
+  background-color: #fff;
   border-radius: 7px;
 }
 
