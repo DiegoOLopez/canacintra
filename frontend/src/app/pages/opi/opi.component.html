@@ -1,6 +1,15 @@
 <app-navbarsesion></app-navbarsesion>
+<div *ngIf="oportunidades.length > 0">
+    <h2>Lista de Oportunidades</h2>
+    <ul>
+      <li *ngFor="let oportunidad of oportunidades">
+        <strong>Descripción:</strong> {{ oportunidad.descripcion }} <br>
+        <strong>Monto Solicitado:</strong> {{ oportunidad.monto }} pesos
+      </li>
+    </ul>
+  </div>
 <div class="container">
-    <div class="card">
+    <div class="card" *ngFor="let oportunidad of oportunidades">
         <h2>Tienda de ropa "La Moda"</h2>
         <p>Campaña de expansión. Por Juan Pérez</p>
         <p>Guadalajara, Jalisco</p>
@@ -28,60 +37,7 @@
         </div>
     </div>
     
-    <div class="card">
-        <h2>Carnicería "El Buen Sabor"</h2>
-        <p>Campaña de renovación. Por María Rodríguez</p>
-        <p>Monterrey, Nuevo León</p>
-        <div class="progress-bar">
-            <div class="fill" style="width: 60%;"></div>
-        </div>
-        <p>Mínimo alcanzado</p>
-        <div class="details">
-            <div class="item">
-                <p><strong>$300.00 MXN</strong> conseguido</p>
-                <p>Tasa anual fija: <strong>9%</strong></p>
-                <p>Mínimo de inversión: <strong>$50.00 MXN</strong></p>
-                <p>Plazo: <strong>Entre 2 y 4 meses</strong></p>
-                <p>Quedan 20 días para invertir</p>
-            </div>
-            <div class="item">
-                <p>Min. $200.00 MXN</p>
-                <p>Max. $300.00 MXN</p>
-                <p>Evaluación de riesgo: <strong>Medio</strong></p>
-            </div>
-        </div>
-        <div class="buttons">
-            <button>Conoce más</button>
-            <button>Quiero invertir</button>
-        </div>
-    </div>
+
     
-    <div class="card">
-        <h2>Restaurante "El Fogoncito"</h2>
-        <p>Campaña de expansión. Por Carlos García</p>
-        <p>Ciudad de México, CDMX</p>
-        <div class="progress-bar">
-            <div class="fill" style="width: 80%;"></div>
-        </div>
-        <p>Mínimo alcanzado</p>
-        <div class="details">
-            <div class="item">
-                <p><strong>$800.00 MXN</strong> conseguido</p>
-                <p>Tasa anual fija: <strong>11%</strong></p>
-                <p>Mínimo de inversión: <strong>$150.00 MXN</strong></p>
-                <p>Plazo: <strong>Entre 4 y 8 meses</strong></p>
-                <p>Quedan 15 días para invertir</p>
-            </div>
-            <div class="item">
-                <p>Min. $600.00 MXN</p>
-                <p>Max. $800.00 MXN</p>
-                <p>Evaluación de riesgo: <strong>Bajo</strong></p>
-            </div>
-        </div>
-        <div class="buttons">
-            <button>Conoce más</button>
-            <button>Quiero invertir</button>
-        </div>
-    </div>
 </div>
 <app-footer></app-footer>
