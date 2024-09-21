@@ -1,4 +1,4 @@
-/** import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 // Importamos el cliente HTTP
 import { HttpClient } from '@angular/common/http';
 // Importamos el servicio observable
@@ -9,27 +9,12 @@ import { Observable } from 'rxjs';
 })
 export class AuthService {
 
-  private apiUrl = 'http://localhost:3000';
+  private apiUrl = 'http://localhost:3000/api/login';  // Asegúrate de que esta URL sea correcta
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  login(email: string, password: string): Observable<any>{
-    return this.http.post(`${this.apiUrl}/login`, {email, password});
-  }
-
-  saveToken(token: string): void{
-    localStorage.setItem('authToken', token);
-  }
-
-  getToken(): string | null{
-    return localStorage.getItem('authToken')
-  }
-
-  isLoggedIn(): boolean {
-    return this.getToken() !== null;
-  }
-  logout(): void{
-    localStorage.removeItem('authToken');
+  // Devuelve un Observable para que el componente maneje la suscripción
+  login(credentials: any): Observable<any> {
+    return this.http.post<any>(this.apiUrl, credentials);
   }
 }
-*/

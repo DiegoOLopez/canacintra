@@ -10,6 +10,8 @@ const router = express.Router();
 
 const service = new OportunidadService();
 
+const { checkAdminRole } = require('../middlewares/auth.handler.js');
+
 // Lista todos los usuarios
 router.get('/', async (req, res, next) => {
     try {

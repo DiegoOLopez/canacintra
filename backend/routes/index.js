@@ -10,6 +10,8 @@ const pagoInversionistaRouter = require('./pago_inversionista.router');
 const propuestaRouter = require('./propuesta.router');
 const usuarioRouter = require('./usuario.router');
 
+const authRouter = require('./auth.router');
+
 function routerApi(app) {
   const router = express.Router();
   app.use('/api', router);
@@ -21,7 +23,7 @@ function routerApi(app) {
   router.use('/pago-inversionista', pagoInversionistaRouter);
   router.use('/propuesta', propuestaRouter);
   router.use('/usuario', usuarioRouter);
-
+  router.use('/log', authRouter);
 }
 
 module.exports = routerApi;

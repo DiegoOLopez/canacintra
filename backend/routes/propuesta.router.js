@@ -1,10 +1,12 @@
 const express = require('express');
+const passport = require('passport');
 
 const PropuestaService = require('../services/propuesta.service.js');
 
 const validatorHandler = require('../middlewares/validator.handler.js');
 
 const { creacionPropuesta, actualizacionPropuesta, buscaPropuesta } = require('../schemas/propuesta.schema.js');
+const { checkAdminRole } = require('../middlewares/auth.handler.js');
 
 const router = express.Router();
 
@@ -32,7 +34,10 @@ router.get('/:id_propuesta', validatorHandler(buscaPropuesta, 'params'), async (
 });
 
 // Crear una propuesta
-router.post('/', validatorHandler(creacionPropuesta), async (req, res, next) => {
+router.post('/',
+    passport.authenticate('jwt', { session: false }), 
+    checkAdminRole,
+    validatorHandler(creacionPropuesta), async (req, res, next) => {
     const body = req.body;
     try {
         const propuesta = await service.create(body);
