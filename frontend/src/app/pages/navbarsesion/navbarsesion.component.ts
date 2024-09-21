@@ -18,7 +18,7 @@ export class NavbarsesionComponent {
   clearLocalStorage() {
     // Borra todas las variables almacenadas en localStorage
     localStorage.clear();
-    alert('Sesión cerrada.');
+    alert('Sesión cerrada .');
     // Opcionalmente redirige al usuario a la página de login
     this.router.navigate(['/login']);
   }
