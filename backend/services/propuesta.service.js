@@ -10,20 +10,21 @@ class PropuestaService {
     }
 
     async create(propuesta){
-        const propuestaCreated = await models.PropuestaClase.create(propuesta);
-        const resultado = await recopilacion_de_sentencia(propuestaCreated);
+        const resultado = await recopilacion_de_sentencia(propuesta);
 
-        // Suponiendo que el retorno tiene la forma { estado: 'aceptado', observacion: 'la retroalimentación aquí' }
-        const { estado, observacion } = resultado;
-      
-        // Guarda las respuestas en variables
-        const estadoEvaluacion = estado;
-        const retroalimentacion = observacion;
-      
-        // Imprime o utiliza las variables como necesites
-        console.log("Estado de la propuesta:", estadoEvaluacion);
-        console.log("Retroalimentación:", retroalimentacion);
-        return resultado;
+        // Usar split para dividir el texto en dos partes
+        const partes = resultado.split(',');
+        
+        // Asignar a las variables
+        const estado = partes[0].trim(); // Texto antes de la coma
+        const observacion = partes[1].trim(); // Texto después de la coma
+
+        propuesta.estado = estado;
+        propuesta.observacion = observacion;
+        const propuestaCreated = await models.PropuestaClase.create(propuesta);
+        const texto = "Tu solicitud ha sido " + estado + " debido a que " + observacion;
+
+        return texto;
     }
 
     async findById(id){
