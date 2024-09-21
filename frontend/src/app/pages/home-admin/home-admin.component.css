@@ -1,7 +1,22 @@
 h1{
     font-size: 50px;
     display: flex;
+    justify-content: center;
 }
-.solicitud{
+h2{
+    margin: 20px;
     display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+.recuadro{
+    justify-content: center;
+    display: flex;
+    margin: 20px;
+}
+.AceptarRechazar{
+    display: flex;
+    margin: auto;
+    width: 50px;
+
 }
