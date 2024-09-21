@@ -16,6 +16,7 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { FormularioComponent } from './pages/formulario/formulario.component';
 import { RecuperarComponent } from './pages/recuperar/recuperar.component';
 import { HomeAdminComponent } from './pages/home-admin/home-admin.component';
+import { NavbarsesionComponent } from './pages/navbarsesion/navbarsesion.component';
 
 // AuthGuard sirve para reservar un sitio si no esta autenticado
 
@@ -28,12 +29,6 @@ export const routes: Routes = [
     },
     {
         path: 'index', component: IndexComponent
-    },
-    {
-        path: 'navbar', component: NavbarComponent
-    },
-    {
-        path: 'footer', component: FooterComponent
     },
     {
         path: 'HomeInversor', component: HomeInversorComponent
@@ -55,6 +50,9 @@ export const routes: Routes = [
     },
     {
         path: 'recuperar', component: RecuperarComponent
+    },
+    {
+        path: 'navbarsesion', component: NavbarsesionComponent
     }
 ];
 
