@@ -12,6 +12,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 
 
+
 export const routes: Routes = [
     {
         path: '', component: AppComponent
