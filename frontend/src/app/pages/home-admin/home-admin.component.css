@@ -1,0 +1,58 @@
+body{
+    background-color: #022e63e4;
+}
+h1{
+    color: white;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+h2{
+    display: flex;
+    justify-content: center;
+    margin-right: 115px;
+}
+.Usuario{
+    margin-right: -250px;
+    width: 70px;
+    margin-left: 5px;
+    padding-left: 10px;
+}
+div .descripcion{   
+    display: flex;
+    margin-left:300px;
+    padding-top: -60px ;
+}
+.descripcion{
+    width: 550px;
+    height: 100px;
+    margin-left: 500px;
+    display: flex;
+}
+p{
+    display: flex;
+    margin-right: auto;
+    padding-top: 15px;
+    padding-left: 100px;
+    width: 800px; 
+}
+.fondo{
+    background-color: rgba(211, 207, 207, 0.989);
+    border: solid black;
+    width: 750px;
+    height: 250px;
+    margin: 0px auto;
+    padding-top: 10px;
+    margin-bottom: 60px;
+}
+.recuadro{
+    justify-content: center;
+    display: flex;
+    height: 65px;
+}
+.AceptarRechazar{
+    border-radius: black;
+    display: flex;
+    padding-top: 10px;
+}
