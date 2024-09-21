@@ -57,7 +57,7 @@ export const routes: Routes = [
     },
     {
         path: 'navbarsesion', component: NavbarsesionComponent
-    }
+    },
     {
         path: 'opi', component: OpiComponent
     }
