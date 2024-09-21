@@ -25,8 +25,8 @@ export class LoginComponent {
 
   login() {
     const credentials = {
-      email: this.email,
-      password: this.password
+      correo: this.email,
+      contrasena: this.password
     };
 
     this.authService.login(credentials).subscribe({
@@ -34,7 +34,11 @@ export class LoginComponent {
         // Almacena el token en el localStorage
         localStorage.setItem('token', response.token);
         // Redirige a otra página (ejemplo: dashboard)
-        this.router.navigate(['/dashboard']);
+        console.log(response.user.tipo);
+        if (response.user.tipo == 'inversor')
+          this.router.navigate(['/HomeInversor']);
+        else if (response.user.tipo == 'emprendedor')
+        this.router.navigate(['/Homenegocio']);
       },
       error: (err) => {
         // Manejo del error
