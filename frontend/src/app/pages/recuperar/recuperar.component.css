@@ -1,0 +1,100 @@
+.fondo{
+    display: flex;
+    height: 100vh;
+    background-color: rgb(133, 204, 232);
+    background: no-repeat;
+    background-size: cover;
+    background-image: url('../../../assets/images/backlogin.jpeg');
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.general{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: center;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+
+}
+.compGeneral{
+
+display: flex;
+align-items: center;
+flex-direction: column;
+box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+width: 400px;
+height: 350px;
+justify-content: center;
+align-content: center;
+background: no-repeat;
+background-size: cover;
+background-image: url('../../../assets/images/morado.jpg');
+}
+
+h1{
+font-size: 30px;
+color: #fff;
+margin: 15px;
+display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+p{
+    color: #fff;
+}
+
+.mensaje{
+font-size: 14px;
+display: flex;
+    justify-content: center;
+    margin: 20px;
+
+}
+
+.send{
+    border-radius: 6px;
+    width: 190px;
+    height: 25px;
+
+}
+
+.BotonE{
+    margin: 10px;
+    padding-right: 7px;
+    display: flex;
+}
+
+.animacion{
+    background: linear-gradient(135deg, #c14fc9c8, #140155);
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    outline: none;
+    white-space: nowrap;
+    padding: 10px 25px;
+    margin: 20px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.animacion:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+.animacion:active{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+
+}
