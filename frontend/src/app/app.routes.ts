@@ -1,4 +1,7 @@
-import { Routes } from '@angular/router';
+import {RouterModule,  Routes } from '@angular/router';
+//import { NgModule,importProvidersFrom } from '@angular/core';
+//import { provideHttpClient, withInterceptors } from '@angular/common/http'; // Asegúrate de tenerlo importado
+//import { bootstrapApplication } from '@angular/platform-browser';
 import { LoginComponent } from './pages/login/login.component';
 import { IndexComponent } from './pages/index/index.component';
 import { NavbarComponent } from './pages/navbar/navbar.component';
@@ -10,7 +13,14 @@ import { HomeNegocioComponent } from './pages/home-negocio/home-negocio.componen
 
 import { RegisterComponent } from './pages/register/register.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
+import { FormularioComponent } from './pages/formulario/formulario.component';
+import { RecuperarComponent } from './pages/recuperar/recuperar.component';
+import { HomeAdminComponent } from './pages/home-admin/home-admin.component';
+import { NavbarsesionComponent } from './pages/navbarsesion/navbarsesion.component';
 
+import { authGuard } from './auth.guard';
+
+// AuthGuard sirve para reservar un sitio si no esta autenticado
 
 
 export const routes: Routes = [
@@ -24,21 +34,43 @@ export const routes: Routes = [
         path: 'index', component: IndexComponent
     },
     {
-        path: 'navbar', component: NavbarComponent
+        path: 'HomeInversor', component: HomeInversorComponent, canActivate: [authGuard]
     },
     {
-        path: 'footer', component: FooterComponent
-    },
-    {
-        path: 'HomeInversor', component: HomeInversorComponent
-    },
-    {
-       path: 'Homenegocio', component: HomeNegocioComponent
+       path: 'Homenegocio', component: HomeNegocioComponent, canActivate: [authGuard]
     },
     {
         path: 'register', component: RegisterComponent
     },
     {
         path: 'contacto', component: ContactoComponent
+    },
+    {
+        path: 'formulario', component: FormularioComponent
+    },
+    {
+        path: 'homeadmin', component: HomeAdminComponent, canActivate: [authGuard]
+    },
+    {
+        path: 'recuperar', component: RecuperarComponent
+    },
+    {
+        path: 'navbarsesion', component: NavbarsesionComponent
     }
 ];
+
+/**
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes), HttpClientModule],
+    exports: [RouterModule]
+})
+export class AppRoutingModule {}
+
+bootstrapApplication(AppComponent, {
+    providers: [
+      importProvidersFrom(RouterModule.forRoot(routes)),
+      provideHttpClient()
+    ]
+  }).catch((err: unknown) => console.error(err));
+   */

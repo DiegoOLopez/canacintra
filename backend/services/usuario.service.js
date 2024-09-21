@@ -1,5 +1,7 @@
 // Importamos los modelos
 const { models } = require ('../libs/sequelize.js');
+const bcrypt = require('bcrypt')
+
 
 class UsuarioService {
     async find(){
@@ -8,7 +10,12 @@ class UsuarioService {
     }
 
     async create(usuario){
-        const usuarioCreated = await models.UsuarioClase.create(usuario);
+        const hash = await bcrypt.hash(usuario.contrasena , 10);    
+        const usuarioCreated = await models.UsuarioClase.create({
+            ...usuario,
+            contrasena: hash
+        });
+        delete usuarioCreated.dataValues.contrasena;
         return usuarioCreated;
     }
 
@@ -17,6 +24,12 @@ class UsuarioService {
         return usuario;
     }
 
+    async findByEmail(email){
+        const usuario = await models.UsuarioClase.findOne({
+            where: { correo: email }
+        });
+        return usuario;
+    }
     async updateById(id, usuario){
         const usuarioUpdated = await models.UsuarioClase.update(usuario, {
             where: { id_usuario: id }

@@ -104,10 +104,34 @@ margin-left: 50px;
 }
 
 .iniciarS{
-border-radius: 5px;
-height: 28px;
-width: 200px;
-background-color: rgb(133, 204, 232) ;
+    background: linear-gradient(135deg, #3dafdfc8, #140155);
+    border: none;
+    border-radius: 17px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    outline: none;
+    white-space: nowrap;
+    padding: 10px 15px;
+    margin: 20px;
+    border-radius: 16px;
+    width: 120px;
+    background-color: rgb(133, 204, 232) ;
+
+}
+
+.iniciarS:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+.iniciarS:active{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+
 
 }
 

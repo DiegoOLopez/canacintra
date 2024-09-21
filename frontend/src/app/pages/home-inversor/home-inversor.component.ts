@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from '../navbar/navbar.component';
 import { FooterComponent } from '../footer/footer.component';
+import { NavbarsesionComponent } from "../navbarsesion/navbarsesion.component";
 
 @Component({
   selector: 'app-home-inversor',
   standalone: true,
-  imports: [ NavbarComponent, FooterComponent],
+  imports: [FooterComponent, NavbarsesionComponent],
   templateUrl: './home-inversor.component.html',
   styleUrl: './home-inversor.component.css'
 })
