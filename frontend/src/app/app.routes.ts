@@ -18,6 +18,8 @@ import { RecuperarComponent } from './pages/recuperar/recuperar.component';
 import { HomeAdminComponent } from './pages/home-admin/home-admin.component';
 import { NavbarsesionComponent } from './pages/navbarsesion/navbarsesion.component';
 
+import { authGuard } from './auth.guard';
+
 // AuthGuard sirve para reservar un sitio si no esta autenticado
 
 export const routes: Routes = [
@@ -31,10 +33,10 @@ export const routes: Routes = [
         path: 'index', component: IndexComponent
     },
     {
-        path: 'HomeInversor', component: HomeInversorComponent
+        path: 'HomeInversor', component: HomeInversorComponent, canActivate: [authGuard]
     },
     {
-       path: 'Homenegocio', component: HomeNegocioComponent
+       path: 'Homenegocio', component: HomeNegocioComponent, canActivate: [authGuard]
     },
     {
         path: 'register', component: RegisterComponent
@@ -46,7 +48,7 @@ export const routes: Routes = [
         path: 'formulario', component: FormularioComponent
     },
     {
-        path: 'homeadmin', component: HomeAdminComponent
+        path: 'homeadmin', component: HomeAdminComponent, canActivate: [authGuard]
     },
     {
         path: 'recuperar', component: RecuperarComponent

@@ -33,8 +33,23 @@ export class LoginComponent {
       next: (response) => {
         // Almacena el token en el localStorage
         localStorage.setItem('token', response.token);
+        localStorage.setItem('id_usuario', JSON.stringify(response.user.id_usuario));
+        localStorage.setItem('nombre', response.user.nombre);
+        localStorage.setItem('apellido_p', response.user.apellido_p);
+        localStorage.setItem('apellido_m', response.user.apellido_m);
+        localStorage.setItem('tipo', response.user.tipo);
+        localStorage.setItem('correo', response.user.correo);
+        localStorage.setItem('n_cuenta', response.user.n_cuenta);
+        console.log(localStorage.getItem('id_usuario'));
+        console.log(localStorage.getItem('nombre'));
+        console.log(localStorage.getItem('apellido_p'));
+        console.log(localStorage.getItem('apellido_m'));
+        console.log(localStorage.getItem('tipo'));
+        console.log(localStorage.getItem('correo'));
+        console.log(localStorage.getItem('n_cuenta'));
+
         // Redirige a otra página (ejemplo: dashboard)
-        console.log(response.user.tipo);
+        
         if (response.user.tipo == 'inversor')
           this.router.navigate(['/HomeInversor']);
         else if (response.user.tipo == 'emprendedor')
