@@ -12,14 +12,14 @@ import { Router } from '@angular/router';
   styleUrl: './navbarsesion.component.css'
 })
 export class NavbarsesionComponent {
-  constructor(private router: Router) {}
-
-  // Función para limpiar las variables locales
-  clearLocalStorage() {
-    // Borra todas las variables almacenadas en localStorage
-    localStorage.clear();
-    alert('Sesión cerrada .');
-    // Opcionalmente redirige al usuario a la página de login
+  constructor(private router: Router) {}  
+ clearLocalStorage() {
+    // Borra todas las variables del localStorage
+    localStorage.setItem('token', '')
+    localStorage.setItem('id_usuario', '')
+    
+    // Navega a la página de inicio de sesión o a la ruta deseada
     this.router.navigate(['/login']);
   }
 }
+
