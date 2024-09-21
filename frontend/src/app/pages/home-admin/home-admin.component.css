@@ -11,9 +11,12 @@ h1{
     padding-top: 50px;
 }
 h2{
-    display: flex;      
+    display: flex;
     justify-content: center;
     margin-right: 115px;
+    align-items: center;
+    flex-direction: row;
+    padding-left: 114px
 }
 .Usuario{
     margin-right: -250px;
@@ -21,7 +24,7 @@ h2{
     margin-left: 5px;
     padding-left: 10px;
 }
-div .descripcion{   
+div .descripcion{
     display: flex;
     margin-left:300px;
     padding-top: -60px ;
@@ -36,8 +39,10 @@ p{
     display: flex;
     margin-right: auto;
     padding-top: 15px;
-    padding-left: 100px;
-    width: 800px; 
+    padding-left: 70px;
+    width: 800px;
+    margin-right: 65px
+
 }
 .fondo{
     background-color: rgba(211, 207, 207, 0.989);

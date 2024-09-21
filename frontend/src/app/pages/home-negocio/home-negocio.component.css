@@ -1,8 +1,4 @@
-body{
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-  }
+
 
 .Componentes{
   display: flex;
@@ -148,4 +144,11 @@ body{
 
 .soliactive button:hover{
   background-color: rgb(72, 72, 72);
+}
+
+.Ac img{
+  width: 80px;
+  height: auto;
+
+
 }
