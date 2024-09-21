@@ -1,5 +1,6 @@
-body{
+.Color{
     background-color: #022e63e4;
+    height: 100vh;
 }
 h1{
     color: white;
@@ -7,9 +8,10 @@ h1{
     display: flex;
     justify-content: center;
     margin-bottom: 60px;
+    padding-top: 50px;
 }
 h2{
-    display: flex;
+    display: flex;      
     justify-content: center;
     margin-right: 115px;
 }
