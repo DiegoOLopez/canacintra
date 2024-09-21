@@ -8,7 +8,6 @@ const validatorHandler = require('../middlewares/validator.handler.js');
 const { creacionPropuesta, actualizacionPropuesta, buscaPropuesta } = require('../schemas/propuesta.schema.js');
 const { checkAdminRole } = require('../middlewares/auth.handler.js');
 
-const { recopilacion_de_sentencia } = require('./../services/validacion.service.js');
 
 const router = express.Router();
 
@@ -40,8 +39,7 @@ router.post('/', async (req, res, next) => {
     const body = req.body;
     try {
         const propuesta = await service.create(body);
-        const resultado = await recopilacion_de_sentencia(propuesta);
-        res.status(201).json(resultado);
+        res.status(201).json(propuesta);
     } catch (error) {
         next(error);
     }

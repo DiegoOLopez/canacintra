@@ -1,5 +1,7 @@
 // Importamos los modelos
 const { models } = require('../libs/sequelize.js');
+const { recopilacion_de_sentencia } = require('./../services/validacion.service.js');
+
 
 class PropuestaService {
     async find(){
@@ -9,7 +11,19 @@ class PropuestaService {
 
     async create(propuesta){
         const propuestaCreated = await models.PropuestaClase.create(propuesta);
-        return propuestaCreated;
+        const resultado = await recopilacion_de_sentencia(propuestaCreated);
+
+        // Suponiendo que el retorno tiene la forma { estado: 'aceptado', observacion: 'la retroalimentación aquí' }
+        const { estado, observacion } = resultado;
+      
+        // Guarda las respuestas en variables
+        const estadoEvaluacion = estado;
+        const retroalimentacion = observacion;
+      
+        // Imprime o utiliza las variables como necesites
+        console.log("Estado de la propuesta:", estadoEvaluacion);
+        console.log("Retroalimentación:", retroalimentacion);
+        return resultado;
     }
 
     async findById(id){
