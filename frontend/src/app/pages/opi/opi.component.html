@@ -1,10 +1,10 @@
 <app-navbarsesion></app-navbarsesion>
-<div *ngIf="oportunidades.length > 0; else noData">
+<div *ngIf="oportunidades.length > 0">
     <h2>Lista de Oportunidades</h2>
     <ul>
       <li *ngFor="let oportunidad of oportunidades">
         <strong>Descripción:</strong> {{ oportunidad.descripcion }} <br>
-        <strong>Monto Solicitado:</strong> {{ oportunidad.monto_solicitado }} pesos
+        <strong>Monto Solicitado:</strong> {{ oportunidad.monto }} pesos
       </li>
     </ul>
   </div>

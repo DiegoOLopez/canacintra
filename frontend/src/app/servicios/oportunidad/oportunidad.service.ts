@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class oportunidadService {
 
-  private apiUrl = 'http://localhost:3000/api/oprtunidad';  // Asegúrate de que esta URL sea correcta y accesible.
+  private apiUrl = 'http://localhost:3000/api/oportunidad';  // Asegúrate de que esta URL sea correcta y accesible.
 
   constructor(private http: HttpClient) {}
 

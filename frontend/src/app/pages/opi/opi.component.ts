@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { FooterComponent } from '../footer/footer.component';
 import { NavbarsesionComponent } from '../navbarsesion/navbarsesion.component';
 import { oportunidadService } from '../../servicios/oportunidad/oportunidad.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-opi',
   standalone: true,
-  imports: [FooterComponent, NavbarsesionComponent],
+  imports: [FooterComponent, NavbarsesionComponent, CommonModule],
   templateUrl: './opi.component.html',
   styleUrls: ['./opi.component.css']
 })
