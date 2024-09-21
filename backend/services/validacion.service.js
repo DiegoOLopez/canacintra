@@ -6,7 +6,7 @@ const genAI = new GoogleGenerativeAI(config.api_key);
 
 async function recopilacion_de_sentencia(sentencia) {
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-  const prompt = "De la siguiente sentencia: "+ sentencia + ", regresame el siguiente formato, y solo ponlo entre corchetes, no quiero que digas nadax: ['Down (primer, segundo, tercero, cuarto', 'tipo de jugada (pase, carrera)', 'yardas (positivas o negativas y el numero)']";
+  const prompt = "De la siguiente sentencia: "+ sentencia + ", dame lo que se te pide";
   
   const result = await model.generateContent(prompt);
   const response = await result.response;

@@ -26,6 +26,7 @@ function routerApi(app) {
   router.use('/usuario', usuarioRouter);
   router.use('/log', authRouter);
   router.use('/validacion', validacion);
+  router.use( '/riesgo'), validacion);
 }
 
 module.exports = routerApi;

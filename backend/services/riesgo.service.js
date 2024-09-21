@@ -1,5 +1,5 @@
 const express = require('express');
-const { recopilacion_de_sentencia } = require('./../services/validacion.service'); // Asegúrate de que la ruta sea correcta
+const { recopilacion_de_sentencia } = require('./../services/riesgo.service'); // Update the service name
 
 const router = express.Router();
 
