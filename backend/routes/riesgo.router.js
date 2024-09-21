@@ -1,5 +1,5 @@
 const express = require('express');
-const { recopilacion_de_sentencia } = require('./../services/riesgo.service'); // Cambiado a riesgo.service
+const { recopilacion_de_sentencia } = require('../services/riesgo.service'); // Cambiado a riesgo.service
 
 const router = express.Router();
 
@@ -15,3 +15,5 @@ router.post('/', async (req, res) => {
     res.status(500).json({ error: 'Error al procesar la solicitud.' });
   }
 });
+
+module.exports = router;
