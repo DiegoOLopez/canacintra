@@ -12,7 +12,7 @@ export class oportunidadService {
   constructor(private http: HttpClient) {}
 
   // Método para obtener propuestas desde la API
-  getOportunidad(): Observable<any> {
-    return this.http.get<any>(this.apiUrl);
+  getOportunidad(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl);
   }
 }
