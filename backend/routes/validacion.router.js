@@ -1,14 +1,10 @@
 const express = require('express');
 const { recopilacion_de_sentencia } = require('./../services/validacion.service'); // Asegúrate de que la ruta sea correcta
 
-const app = express();
-const port = 3000;
-
-// Middleware para recibir datos en formato JSON
-app.use(express.json());
+const router = express.Router();
 
 // Ruta para manejar la solicitud
-app.post('/', async (req, res) => {
+router.post('/', async (req, res) => {
   const { sentencia } = req.body; // Obtener la sentencia del body
 
   try {
@@ -20,6 +16,4 @@ app.post('/', async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Servidor corriendo en http://localhost:${port}`);
-});
+module.exports = router;
