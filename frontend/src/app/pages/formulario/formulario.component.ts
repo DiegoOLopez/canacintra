@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { FooterComponent } from '../footer/footer.component';
-import { NavbarComponent } from '../navbar/navbar.component';
+import { NavbarsesionComponent } from "../navbarsesion/navbarsesion.component";
 @Component({
   selector: 'app-formulario',
   standalone: true,
-  imports: [FooterComponent, NavbarComponent],
+  imports: [FooterComponent, NavbarsesionComponent],
   templateUrl: './formulario.component.html',
   styleUrl: './formulario.component.css'
 })
