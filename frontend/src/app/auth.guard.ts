@@ -15,10 +15,10 @@ export const authGuard: CanActivateFn = (route, state) => {
 
   // Lógica de control de acceso
   if (userType === 'admin') {
-    if (requestedRoute === 'Homeadmin') {
+    if (requestedRoute === 'homeadmin') {
       return true; // Permitir acceso a Homeadmin
     } else {
-      router.navigate(['/Homeadmin']); // Redirigir si intenta acceder a otras páginas
+      router.navigate(['/homeadmin']); // Redirigir si intenta acceder a otras páginas
       return false;
     }
   } else if (userType === 'inversor' || userType === 'emprendedor') {

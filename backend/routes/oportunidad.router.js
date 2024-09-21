@@ -34,7 +34,7 @@ router.get('/:id_oportunidad', validatorHandler(busquedaOportunidadSchema, 'para
 });
 
 // Crear una oportunidad
-router.get('/', validatorHandler(creacionOportunidadSchema), async (req, res, next) => {
+router.post('/', validatorHandler(creacionOportunidadSchema), async (req, res, next) => {
     const body = req.body;
     try {
         const oportunidad = await service.create(body);
