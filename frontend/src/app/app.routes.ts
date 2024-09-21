@@ -10,6 +10,7 @@ import { FooterComponent } from './pages/footer/footer.component';
 import { HomeInversorComponent } from './pages/home-inversor/home-inversor.component';
 
 import { HomeNegocioComponent } from './pages/home-negocio/home-negocio.component';
+import { OpiComponent } from './pages/opi/opi.component';
 
 import { RegisterComponent } from './pages/register/register.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
@@ -56,6 +57,9 @@ export const routes: Routes = [
     },
     {
         path: 'navbarsesion', component: NavbarsesionComponent
+    }
+    {
+        path: 'opi', component: OpiComponent
     }
 ];
 
