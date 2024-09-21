@@ -1,26 +1,19 @@
-const { GoogleGenerativeAI } = require("@google/generative-ai");
-const { config } = require('../config/config');
+const express = require('express');
+const { recopilacion_de_sentencia } = require('./../services/riesgo.service'); // Update the service name
 
-// Inicializar la IA con el modelo
-const genAI = new GoogleGenerativeAI(config.api_key);
+const router = express.Router();
 
-async function recopilacion_de_sentencia(sentencia) {
-  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-  const prompt = "Dame un saludo bonito"
-  const result = await model.generateContent(prompt);
-  const response = await result.response;
-  const texto = response.text();
-  
-  // Eliminar los corchetes inicial y final
-  const textoSinCorchetes = texto.slice(1, -1);
+// Ruta para manejar la solicitud
+router.post('/', async (req, res) => {
+  const { sentencia } = req.body; // Obtener la sentencia del body
 
-  // Dividir la cadena por comas
-  const elementos = textoSinCorchetes.split(',');
+  try {
+    const resultado = await recopilacion_de_sentencia(sentencia); // Llamar al servicio
+    res.status(200).json({ resultado }); // Enviar la respuesta al front-end
+  } catch (error) {
+    console.error('Error al procesar la sentencia:', error);
+    res.status(500).json({ error: 'Error al procesar la solicitud.' });
+  }
+});
 
-  // Limpiar los elementos del array
-  const array = elementos.map(elemento => elemento.trim().replace(/^['"]|['"\]]$/g, ''));
-
-  return array;
-}
-
-module.exports = { recopilacion_de_sentencia };
+module.exports = router;
