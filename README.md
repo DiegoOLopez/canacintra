@@ -1,128 +1,100 @@
 # Canacintra
 
-Bienvenido al repositorio del proyecto **Canacintra**. 
+A comprehensive crowdlending and investment platform designed to bridge the gap between entrepreneurs seeking accessible financing and investors looking for productive projects. The system digitizes and automates the entire credit lifecycle, from initial funding requests to capital returns.
 
-Este sistema es una **Plataforma de Crowdlending e Inversión** diseñada para conectar a emprendedores que buscan financiamiento con inversores interesados en apoyar proyectos productivos. La aplicación gestiona todo el ciclo de vida del crédito y la inversión, desde la solicitud de fondos hasta el retorno de capital.
+## Main Features
 
-## 💡 ¿Qué problema soluciona?
+- **Role-Based Access Control:**
+  - **Investors:** Browse curated investment opportunities, allocate capital, and manage investment portfolios.
+  - **Entrepreneurs (Businesses):** Submit financing requests, upload required documentation, and track proposal statuses.
+  - **Administrators:** Validate business proposals, manage users, and oversee the platform's capital flow.
+- **Credit Lifecycle Management:** Complete end-to-end workflow for creating, reviewing, and approving loan applications.
+- **Financial Tracking:** Detailed tracking of requested amounts, active investments, amortization schedules, and payment histories.
+- **Specialized Dashboards:** Dedicated KPI-driven interfaces tailored for Administrators, Investors, and Entrepreneurs.
 
-El objetivo principal de la aplicación es **facilitar el acceso al crédito para emprendedores y PyMEs**, ofreciendo a su vez opciones de inversión atractivas. El sistema digitaliza y automatiza el proceso de:
+## Tech Stack
 
-1.  **Solicitud de Crédito (Entrepreneurs):** Los usuarios pueden registrar propuestas de negocio, especificando monto solicitado, plazos y detalles del proyecto para su evaluación.
-2.  **Gestión de Oportunidades:** Las propuestas aprobadas se convierten en "Oportunidades" de inversión publicadas en la plataforma.
-3.  **Inversión (Investors):** Los usuarios con perfil de inversor pueden visualizar estas oportunidades y aportar capital.
-4.  **Administración de Pagos:** El sistema lleva el control de los pagos de los emprendedores (retorno del crédito) y la distribución de rendimientos a los inversores.
+**Frontend:**
+- Angular 18 (TypeScript)
+- Server-Side Rendering (SSR) via Express
 
-## ✨ Funcionalidades Principales
+**Backend:**
+- Node.js & Express.js
+- PostgreSQL (Relational Database)
+- Sequelize ORM
+- Passport.js & JWT (Authentication)
+- Docker & Docker Compose (Infrastructure)
 
-- **🔐 Autenticación y Roles:** 
-    - **Inversor:** Explora oportunidades y gestiona su portafolio de inversiones.
-    - **Negocio (Emprendedor):** Solicita financiamiento, sube documentación y da seguimiento a sus propuestas.
-    - **Administrador:** Valida propuestas, gestiona usuarios y supervisa el flujo de capital.
-- **� Gestión de Propuestas:** Flujo completo para crear, editar y aprobar solicitudes de crédito.
-- **💰 Control Financiero:** Seguimiento detallado de montos solicitados, invertidos, tablas de amortización y historial de pagos.
-- **📊 Dashboards Especializados:** Vistas dedicadas para cada rol (Admin, Inversor, Negocio) con métricas relevantes (KPIs).
+## Installation and Usage
 
----
+### Prerequisites
+- [Node.js](https://nodejs.org/) (LTS recommended)
+- [Docker](https://www.docker.com/) and Docker Compose
+- [Angular CLI](https://angular.io/cli)
 
-## 🚀 Tecnologías
+### Backend Setup
 
-El proyecto utiliza un stack tecnológico moderno y eficiente:
+1. **Navigate to the backend directory:**
+   ```bash
+   cd backend
+   ```
 
-### Frontend
-- **Framework:** Angular 18
-- **Lenguaje:** TypeScript
-- **Renderizado:** Server-Side Rendering (SSR) con Express.
-- **Diseño:** Interfaces responsivas y amigables.
+2. **Environment Variables:**
+   Create a `.env` file in the `backend/` directory with the following structure:
+   ```env
+   PORT=3000
+   NODE_ENV=dev
+   DB_USER=canacintra_admin
+   DB_PASSWORD=12345678
+   DB_HOST=localhost
+   DB_NAME=canacintra
+   DB_PORT=5432
+   API_KEY=your_api_key
+   JWT_SECRET=your_jwt_secret
+   ```
 
-### Backend
-- **Runtime:** Node.js
-- **Framework:** Express
-- **Base de Datos:** PostgreSQL
-- **ORM:** Sequelize (Modelado de datos relacional).
-- **Seguridad:** Autenticación con Passport.js y JWT.
-- **Infraestructura:** Docker y Docker Compose.
+3. **Start the Database:**
+   ```bash
+   docker-compose up -d
+   ```
 
-## 📋 Prerrequisitos
+4. **Install Dependencies and Run Migrations:**
+   ```bash
+   npm install
+   npm run migrations:run
+   ```
 
-Para ejecutar este proyecto localmente, necesitas:
-- [Node.js](https://nodejs.org/) (Versión LTS recomendada)
-- [Docker](https://www.docker.com/) y Docker Compose
-- [Angular CLI](https://angular.io/cli) (`npm install -g @angular/cli`)
+5. **Start the Development Server:**
+   ```bash
+   npm run dev
+   ```
 
-## 🛠️ Instalación y Configuración
+### Frontend Setup
 
-### 1. Clonar el repositorio
-```bash
-git clone <URL_DEL_REPOSITORIO>
-cd canacintra
-```
+1. **Navigate to the frontend directory:**
+   ```bash
+   cd frontend
+   ```
 
-### 2. Configuración del Backend
+2. **Install Dependencies and Start:**
+   ```bash
+   npm install
+   npm run start
+   ```
 
-```bash
-cd backend
-```
+3. Open your browser and navigate to `http://localhost:4200`.
 
-**Variables de Entorno (.env):**
-Crea un archivo `.env` en `backend/`:
-```env
-PORT=3000
-NODE_ENV=dev
-DB_USER=canacintra_admin
-DB_PASSWORD=12345678
-DB_HOST=localhost
-DB_NAME=canacintra
-DB_PORT=5432
-API_KEY=tu_api_key
-JWT_SECRET=tu_secret_jwt
-```
+## Screenshots
 
-**Iniciar Base de Datos:**
-```bash
-docker-compose up -d
-```
+![Investor Dashboard](https://via.placeholder.com/800x450.png?text=Investor+Dashboard)
+*Investor Dashboard Overview*
 
-**Instalar y Migrar:**
-```bash
-npm install
-npm run migrations:run
-```
+![Entrepreneur Application](https://via.placeholder.com/800x450.png?text=Entrepreneur+Application+Form)
+*Entrepreneur Loan Application Form*
 
-**Correr Servidor:**
-```bash
-npm run dev
-```
+![Admin Control Panel](https://via.placeholder.com/800x450.png?text=Admin+Control+Panel)
+*Administrator Control Panel*
 
-### 3. Configuración del Frontend
+## License
 
-```bash
-cd ../frontend
-npm install
-ng serve
-```
-Accede desde `http://localhost:4200`.
-
-## 📦 Estructura del Proyecto
-
-```
-canacintra/
-├── backend/            # API RESTful
-│   ├── db/models/      # Modelos (Propuesta, Inversión, Pago, etc.)
-│   ├── services/       # Lógica de negocio (Cálculo de pagos, validaciones)
-│   └── routes/         # Endpoints de la API
-│
-├── frontend/           # Aplicación Angular
-│   ├── src/app/pages/  # Vistas (Home, Dashboards, Formularios)
-│   └── src/app/servicios/ # Conexión con Backend
-│
-└── README.md
-```
-
-## 🤝 Contribución
-
-1. Fork del repositorio.
-2. Crea tu rama (`git checkout -b feature/nueva-funcionalidad`).
-3. Commit (`git commit -m 'Agrega nueva funcionalidad'`).
-4. Push (`git push origin feature/nueva-funcionalidad`).
-5. Pull Request.
+This project is licensed under the [ISC License](LICENSE).
